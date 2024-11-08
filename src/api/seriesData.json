@@ -1,0 +1,32 @@
+[
+    {
+        "name":"Lovely Runner",
+        "id":"lovely-runner",
+        "img_url":"http://localhost:5173/images/lr.webp",
+        "rating":"9.8",
+        "description":"Im Sol travels back in time to prevent the tragic of her favorite star, Ryu Sun jae.",
+        "cast":["Kim Hye Veen","Byeon Woo Seok","Song Geon Hee"],
+        "generic":["Romantic Comedy","Fantasy"],
+        "match_url":"https://www.viki.com/tv/40466c-lovely-runner"
+    },
+    {
+        "name":"Stranger Things",
+        "id":"stranger-things",
+        "img_url":"http://localhost:5173/images/st.jpg",
+        "rating":"8.7",
+        "description":"A group of young friends witness supernatural forces and secret government exploits",
+        "cast":["Winona Ryder","David Harbour","Millie Bobby Brown"],
+        "generic":["Drama","Fantasy","Horror"],
+        "match_url":"https://www.netflix.com/title/80057281"
+    },
+    {
+        "name":"Monkey Heist",
+        "id":"monkey-heist",
+        "img_url":"http://localhost:5173/images/mh.jpg",
+        "rating":"8.3",
+        "description":"A criminal mastermind who goes by 'The Professor' plans the biggest heist in recorded history",
+        "cast":["Ursula Corbero","Alvaro Morte","Itziar Ituno"],
+        "generic":["Action","Crime","Drama"],
+        "match_url":"https://www.netflix.com/title/80192098"
+    }
+]
