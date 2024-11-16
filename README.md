@@ -16,6 +16,8 @@ Currently, two official plugins are available:
 6. Import and export method use , combine method , nameConvension method
 7. looping in jsx
 8. props in loop
+9. Design inline css
+10. 
 */
 
 /* 
