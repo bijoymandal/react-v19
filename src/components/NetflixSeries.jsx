@@ -1,8 +1,9 @@
 import seriesData from "../api/seriesData.json";
+import { ProfileCard } from "./Profile";
 import { SeriesCard } from "./SeriesCard";
 
 export const NetflixCode = () => {
-    const course = "Developent course";
+    const course = "Development course";
     const userName=()=>{
       const name = "UserName";
       return name;
@@ -13,16 +14,18 @@ export const NetflixCode = () => {
         <h1>This Is Web {course} {1+2+3}</h1>
         <p>This course fallowed by a {userName()} </p> {/*use function dynamic*/}
         <button>{age >=18 ? 'Watch now':'Available' }</button>
-        <ul>
+        <ul className="flex flex-row gap-2 p-2">
             {
               
                 seriesData.map((curElem)=>(  
-                  <SeriesCard key={curElem.id} curElem={curElem}/>)  
+                  <SeriesCard key={curElem.id} curElem={curElem}></SeriesCard>)  
                 )}           
         </ul>
+        <ProfileCard></ProfileCard>
       </>
     );
   };
+
 
   const Footer = ()=>{
     return(<>
