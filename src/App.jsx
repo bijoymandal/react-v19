@@ -9,7 +9,7 @@ function App() {
         This is used React Js and Javascript Projects
         {/* React Component  */}
         <NetflixCode/>   
-        <Pratices/>
+        <Pratices />
         <Footer/>
     </>
   )
