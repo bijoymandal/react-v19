@@ -2,6 +2,8 @@ import seriesData from "../api/seriesData.json";
 import { ProfileCard } from "./Profile";
 import { SeriesCard } from "./SeriesCard";
 
+
+
 export const NetflixCode = () => {
     const course = "Development course";
     const userName=()=>{

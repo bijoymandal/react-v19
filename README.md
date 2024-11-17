@@ -17,7 +17,7 @@ Currently, two official plugins are available:
 7. looping in jsx
 8. props in loop
 9. Design inline css
-10. 
+10.Module css in project
 */
 
 /* 

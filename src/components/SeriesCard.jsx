@@ -1,3 +1,17 @@
+import style from "./Netflix.module.css";
+
+
+
+{/*
+    note : 
+    In javascript className like card-content
+    how to use in module in dot operator 
+    className={style.card-content} // not like that 
+    className={style["card-content"]} // this s perfect answer in javascript 
+    other wise change in style sheet css class like this card_content     
+    
+    
+*/}
 
 
 export const SeriesCard = ({curElem}) => {
@@ -21,6 +35,7 @@ export const SeriesCard = ({curElem}) => {
 
     return (
         <li className="bg-gray-200 p-2">
+        {/* <li className="style.card"> */}   {/* css module use this type*/}
             <div>
                 <img src={img_url} alt={name} width="100%" height="40%" />
             </div>
