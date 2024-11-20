@@ -1,5 +1,5 @@
 import style from "./Netflix.module.css";
-
+import styled from "styled-components";
 
 
 {/*
@@ -20,18 +20,58 @@ export const SeriesCard = ({curElem}) => {
 
     {/* destructing of props data */}
     const {img_url,name,rating,description,match_url,generic} = curElem;
-
-    const btnStyle= {
-        padding:"0.2rem 1.2rem",
-        border:"none",
-        fontSize:"1.2rem",
-        color:"#000000",
-        textDecoration:"none",
-        backgroundColor:"blue",
-        marginTop:"2px"
-    }
-
+    {/* button styles */}
     
+    
+    // const btnStyle= {
+    //     padding:"0.2rem 1.2rem",
+    //     border:"none",
+    //     fontSize:"1.2rem",
+    //     color:"#000000",
+    //     textDecoration:"none",
+    //     backgroundColor:"blue",
+    //     marginTop:"2px"
+    // }
+    
+    
+    {/* button props */}
+    
+    // const buttonStyle = style.button({
+    //     padding:"0.2rem 1.2rem",
+    //     border:"none",
+    //     fontSize:"1.2rem",
+    //     color:"#000000",
+    //     textDecoration:"none",
+    //     backgroundColor:"blue",
+    //     marginTop:"2px"
+    // }); 
+    {/* style component using create button style and tag use */}
+    
+    // const ButtonStyle = styled.button({
+    //     padding:"0.2rem 1.2rem",
+    //     border:"none",
+    //     fontSize:"1.2rem",
+    //     color:"#000000",
+    //     textDecoration:"none",
+    //     backgroundColor:"blue",
+    //     marginTop:"2px"
+    // });
+
+    const ButtonStyleTemp = styled.button`
+        padding:0.2rem 1.2rem;
+        border:none;
+        font-size:1.2rem;
+        color:#000000;
+        text-decoration:none;
+        background-color:blue;
+        margin-top:2px;
+        cursor:pointer;
+    `
+    const Rating = styled.h3`
+        font-size:1.6rem;
+        color:#7dcea0;
+        text-transform:capitalize;
+    `
 
     return (
         <li className="bg-gray-200 p-2">
@@ -40,15 +80,17 @@ export const SeriesCard = ({curElem}) => {
                 <img src={img_url} alt={name} width="100%" height="40%" />
             </div>
             <h2>Name:{name}</h2>
-            <h3 style={{ margin:"1.2rem 0" }}>Rating:
+            <Rating style={{ margin:"1.2rem 0" }}>Rating:
                 
                 <span className={`rating ${rating>=8.5 ? 'super_hit':'average'}`}>{rating }</span>
 
-            </h3>
+            </Rating>
             <p>Summary:{description}</p>
             <p>Genre: {generic}</p>
-            <a href={match_url} style={btnStyle} target="_blank" className="mt-3">Watch Now</a>
+            {/* <a href={match_url} style={buttonStyle} target="_blank" className="mt-3">Watch Now</a> */}
             {/* <button>Watch Now</button> */}
+            {/* <ButtonStyle>Watch Now</ButtonStyle> */}
+            <ButtonStyleTemp rating={rating}>Watch Now</ButtonStyleTemp>
         </li>
     );
 };
