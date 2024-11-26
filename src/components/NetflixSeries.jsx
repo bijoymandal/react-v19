@@ -1,4 +1,6 @@
 import seriesData from "../api/seriesData.json";
+import { EventHandling } from "./EventHandling";
+import { EventProps } from "./EventProps";
 import { ProfileCard } from "./Profile";
 import { SeriesCard } from "./SeriesCard";
 
@@ -24,14 +26,18 @@ export const NetflixCode = () => {
                 )}           
         </ul>
         <ProfileCard></ProfileCard>
+        <EventHandling/>
+        <EventProps />
       </>
     );
   };
 
 
   const Footer = ()=>{
-    return(<>
-        <p>@copyright</p>
-    </>);
+    return(
+      <>
+          <p>@copyright</p>
+      </>
+    );
   };
   export default Footer;

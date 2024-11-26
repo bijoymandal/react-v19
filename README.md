@@ -18,6 +18,11 @@ Currently, two official plugins are available:
 8. props in loop
 9. Design inline css
 10.Module css in project
+11. Tailwind css use in project .
+12. Event handing ex:onSubmit,onChange,onClick
+13. Event handing using props
+
+
 */
 
 /* 
