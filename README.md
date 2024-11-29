@@ -21,6 +21,8 @@ Currently, two official plugins are available:
 11. Tailwind css use in project .
 12. Event handing ex:onSubmit,onChange,onClick
 13. Event handing using props
+14. Event Propagtion(enent capcturing event dom handeling target to dom structure{captuding phase}, target phase handing button click call as bubbling phase)
+15. state in react js
 
 
 */
