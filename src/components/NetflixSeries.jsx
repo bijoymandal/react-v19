@@ -1,6 +1,8 @@
 import seriesData from "../api/seriesData.json";
 import { EventHandling } from "./EventHandling";
 import { EventProps } from "./EventProps";
+import { DerivedState } from "./hooks/DerivedState";
+import { LiftingState } from "./hooks/LitStateUp";
 import { State } from "./hooks/State";
 import { ProfileCard } from "./Profile";
 import { SeriesCard } from "./SeriesCard";
@@ -30,6 +32,8 @@ export const NetflixCode = () => {
         <EventHandling/>
         <EventProps />
         <State />
+        <DerivedState/>
+        <LiftingState/>
       </>
     );
   };
