@@ -1,5 +1,8 @@
-import Footer,{ NetflixCode } from "./components/NetflixSeries";
-import { Pratices } from "./Pratices";
+// import Footer,{ NetflixCode } from "./components/NetflixSeries";
+// import { Pratices } from "./Pratices";
+
+import { Todo } from "./projects/Todo/Todo"
+// import { ToggleSwitch } from "./projects/TogleSwitch/ToggleSwitch"
 
 function App() {
 
@@ -8,9 +11,13 @@ function App() {
         {/* React Fragment */}
         This is used React Js and Javascript Projects
         {/* React Component  */}
-        <NetflixCode/>   
-        <Pratices />
-        <Footer/>
+        {/* <NetflixCode/>    */}
+        {/* <Pratices /> */}
+        {/* <Footer/> */}
+
+        {/* <ToggleSwitch/> */}
+        <Todo/>
+
     </>
   )
 }
