@@ -28,7 +28,18 @@ export const Todo = () =>{
 
         setDateTime(`${formateDate} - ${formatTime}`);
     },1000);
+    //todo delete Task
+    const handleDeleteTask = (value) => {
+        const deleteList = task.filter((currTask)=>currTask !== value);
+        setTask(deleteList);
+    }
 
+    //todo clearAll Task list
+
+    const handleClearTask = ()=>{
+        console.log("data");
+        setTask([]);
+    }
     return (
         <>
             <section className="todo-container">
@@ -56,7 +67,9 @@ export const Todo = () =>{
                                             <div className="flex items-center space-x-2">
                                                 { index+1} &nbsp;
                                                 <MdOutlineCheckCircleOutline />
+                                                <button type="button" className="bg-red-700 text-white shadow-md rounded-lg border-none" onClick={()=>handleDeleteTask(curTask)}>
                                                 <MdDelete />
+                                                </button>
                                             </div>
                                             <div className="flex-1 space-x-3">
                                                 <p className="text-blue-600 font-semibold space-y-3">{curTask} Date </p>
@@ -69,6 +82,15 @@ export const Todo = () =>{
                         }
 
                 </section>
+                {
+                    task.length>0 && (
+                    <section>
+                        <button type="button" onClick={handleClearTask} className="bg-red-600 text-center text-black px-2 py-2 rounded-md">
+                            Clear All
+                        </button>
+                    </section>
+                    )
+                }
             </section>
         </>
     );
