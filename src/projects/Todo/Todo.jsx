@@ -9,20 +9,23 @@ export const Todo = () =>{
 
 
     const handleFormSubmit  =  (inputValue) => {
-        
-        if(!inputValue)return ;
-        if(task.includes(inputValue))// search task including array exists
-        {
-            return;
-        }
-        setTask((prev)=> [...prev,inputValue]);
+        const{id,content,checked} = inputValue; // destructuring 
+
+        if(!content)return ;
+        // if(task.includes(content))// search task including array exists
+        // {
+        //     return;
+        // }
+        const ifTodoMatched = task.find((currTask)=> currTask.content === content);
+        if(ifTodoMatched) return ;
+        setTask((prev)=> [...prev,{id,content,checked}]);
     }
     //todo Date & Time
 
 
     //todo delete Task
     const handleDeleteTask = (value) => {
-        const deleteList = task.filter((currTask)=>currTask !== value);
+        const deleteList = task.filter((currTask)=>currTask.content !== value);
         setTask(deleteList);
     }
 
@@ -31,6 +34,20 @@ export const Todo = () =>{
     const handleClearTask = ()=>{
         console.log("data");
         setTask([]);
+    }
+
+    // todo list check & uncheck
+    const handleCheckTask = (index) =>{
+        const updateTask = task.map((currTask)=>{
+            if(index === currTask.content){
+                return {...currTask,checked:!currTask.checked};
+            }
+            else{
+                return currTask;
+            }
+        });
+        console.log(updateTask);
+        setTask(updateTask);
     }
     return (
         <>
@@ -44,7 +61,13 @@ export const Todo = () =>{
                         {
                             task.map((curTask,index)=>{
                                 return (
-                                    <TodoList key={index} index={index} data={curTask} handleDeleteTodo={handleDeleteTask}/>
+                                    <TodoList 
+                                    key={curTask.id} 
+                                    index={index} 
+                                    data={curTask.content} 
+                                    checked={curTask.checked}
+                                    handleDeleteTodo={handleDeleteTask} 
+                                    handleCheckedTodo={handleCheckTask}/>
                                 );
                             })  
                         }
