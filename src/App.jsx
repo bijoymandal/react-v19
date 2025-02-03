@@ -1,6 +1,8 @@
 // import Footer,{ NetflixCode } from "./components/NetflixSeries";
 // import { Pratices } from "./Pratices";
 
+import { Challenge } from "./components/hooks/useState/Challenge"
+import { ShortCircuit } from "./components/ShortCircuit"
 import { Todo } from "./projects/Todo/Todo"
 // import { ToggleSwitch } from "./projects/TogleSwitch/ToggleSwitch"
 
@@ -17,7 +19,8 @@ function App() {
 
         {/* <ToggleSwitch/> */}
         <Todo/>
-
+        <ShortCircuit/>
+        <Challenge/>
     </>
   )
 }
