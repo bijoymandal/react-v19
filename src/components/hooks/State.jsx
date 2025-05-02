@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const State = ()=>{
     // let value=0;
     let [count,setCount] = useState(0);
+    useEffect(()=>{
+        const timer = setInterval(()=>{
+            setCount((prev)=>prev+1);
+        },1000);
+        return ()=> clearInterval(timer);
+    },[]);
     const handleButtonClick = () => {
         setCount(()=>count++);
     }

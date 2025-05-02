@@ -1,7 +1,10 @@
 // import Footer,{ NetflixCode } from "./components/NetflixSeries";
 // import { Pratices } from "./Pratices";
 
+import UseEffect from "./components/hooks/useEffect"
+import { PokeMonAPI } from "./components/hooks/UseEffect/PokeMonAPI"
 import { Challenge } from "./components/hooks/useState/Challenge"
+import { Controlled } from "./components/hooks/useState/controlled"
 import { ShortCircuit } from "./components/ShortCircuit"
 import { Todo } from "./projects/Todo/Todo"
 // import { ToggleSwitch } from "./projects/TogleSwitch/ToggleSwitch"
@@ -18,9 +21,12 @@ function App() {
         {/* <Footer/> */}
 
         {/* <ToggleSwitch/> */}
-        <Todo/>
-        <ShortCircuit/>
-        <Challenge/>
+        {/* <Todo/> */}
+        {/* <ShortCircuit/> */}
+        {/* <Challenge/> */}
+        {/* <Controlled/> */}
+        <UseEffect/>
+        <PokeMonAPI/> 
     </>
   )
 }

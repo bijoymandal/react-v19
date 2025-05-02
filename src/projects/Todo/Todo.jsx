@@ -3,11 +3,12 @@ import { TodoForm } from "./TodoForm";
 import { TodoList } from "./TodoList";
 import { TodoDate } from "./TodoDate";
 
+import { getLocalStorageTodoData, setLocalStorageTodoData } from "./TodoLocalStorage";
+
 export const Todo = () =>{
+    const [task,setTask]=useState(()=>getLocalStorageTodoData());
+
     
-    const [task,setTask]=useState([]);
-
-
     const handleFormSubmit  =  (inputValue) => {
         const{id,content,checked} = inputValue; // destructuring 
 
@@ -19,6 +20,9 @@ export const Todo = () =>{
         const ifTodoMatched = task.find((currTask)=> currTask.content === content);
         if(ifTodoMatched) return ;
         setTask((prev)=> [...prev,{id,content,checked}]);
+
+        //todo list store in local system
+        setLocalStorageTodoData(task);
     }
     //todo Date & Time
 
@@ -26,6 +30,7 @@ export const Todo = () =>{
     //todo delete Task
     const handleDeleteTask = (value) => {
         const deleteList = task.filter((currTask)=>currTask.content !== value);
+        // localStorage.setItem(TodoKey, JSON.stringify(deleteList));
         setTask(deleteList);
     }
 
