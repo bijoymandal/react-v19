@@ -1,7 +1,11 @@
 // import Footer,{ NetflixCode } from "./components/NetflixSeries";
 // import { Pratices } from "./Pratices";
 
-import { ParentComponent } from "./components/PropsDrillings"
+import { BioProvider } from "./components/hooks/ContextAPI"
+import { Home } from "./components/hooks/ContextAPI/Home"
+import { Service } from "./components/hooks/ContextAPI/Services"
+
+// import { ParentComponent } from "./components/PropsDrillings"
 
 // import { ForwardRef } from "./components/hooks/useRef/forwardRef"
 
@@ -37,7 +41,12 @@ function App() {
       {/* <Registration /> */}
       {/* <UseRef /> */}
       {/* <ForwardRef /> */}
-      <ParentComponent />
+      {/* <ParentComponent /> */}
+      <BioProvider>
+        <Home />
+        <Service />
+      </BioProvider>
+
     </>
   )
 }
