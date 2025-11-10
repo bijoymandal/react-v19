@@ -1,7 +1,9 @@
 // import Footer,{ NetflixCode } from "./components/NetflixSeries";
 // import { Pratices } from "./Pratices";
 
-import { ForwardRef } from "./components/hooks/useRef/forwardRef"
+import { ParentComponent } from "./components/PropsDrillings"
+
+// import { ForwardRef } from "./components/hooks/useRef/forwardRef"
 
 // import UseEffect from "./components/hooks/useEffect"
 // import PokeMonAPI from "./Pokemon/PokemonAPI"
@@ -34,7 +36,8 @@ function App() {
       {/* <PokeMonAPI/> */}
       {/* <Registration /> */}
       {/* <UseRef /> */}
-      <ForwardRef />
+      {/* <ForwardRef /> */}
+      <ParentComponent />
     </>
   )
 }
