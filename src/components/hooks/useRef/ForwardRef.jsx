@@ -33,7 +33,7 @@ export const ForwardRef = () => {
 // });
 
 const BeforeReact19Input = (props) => {
-    console.log("props data", props);
+    // console.log("props data", props);
     const id = userId();
     return (
         <>
